@@ -46,6 +46,12 @@ export class BoardComponent implements OnInit {
     }
   }
 
+  /**
+   * This function validates the board for a winning combination.
+   *
+   * NOTE: In a real world situation and to keep the code as simple as possible,
+   *       I would have created an array of winning combination as there are only 8 possible scenarios.
+   */
   validate(): boolean {
     let rows: string[][] = [];
     for (let i = 0; i < this.grid.length; i += GRID_DIMENSION) {
