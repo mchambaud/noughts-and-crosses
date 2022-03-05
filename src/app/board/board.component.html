@@ -1,0 +1,13 @@
+
+<h3 *ngIf="!isDraw">Player {{player}}
+  <span *ngIf="winner">WINS!</span>
+  <span *ngIf="!winner">turn</span>
+</h3>
+
+<h3 *ngIf="isDraw">NO WINNER</h3>
+
+<button (click)="newGame()">Restart Game</button>
+<hr />
+<div class="board">
+  <app-tile *ngFor="let tile of grid; let position = index" [value]="tile" (click)="onMove(position)"></app-tile>
+</div>
